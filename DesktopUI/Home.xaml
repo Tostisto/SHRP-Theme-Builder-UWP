@@ -1,0 +1,526 @@
+﻿<Page
+    x:Class="MyProject.Home"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
+
+    <StackPanel Padding="25">
+
+        <Frame HorizontalAlignment="Center" Width="300" Margin="0,50">
+            <Image Source="Assets/logo.svg" Stretch="Uniform"/>
+        </Frame>        
+
+
+        <!--Theme name-->
+        <Frame Padding="25">
+            <TextBox Header="Name of your theme" Width="300" HorizontalAlignment="Left" PlaceholderText="SHRP-Theme" x:Name="themeName"></TextBox>
+        </Frame>
+
+
+        <!--Theme colors title-->
+        <Frame Padding="20, 5, 0, 0">
+            <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="Main Theme Color" Margin="0,0,0,12"/>
+        </Frame>
+
+        <!--Background Color-->
+        <Border Background="{ThemeResource LayerFillColorDefaultBrush}"
+                Padding="15"
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Stretch" 
+                Margin="16,3"
+                CornerRadius="8"
+                BorderThickness="1"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+
+            <Grid>
+                <TextBlock VerticalAlignment="Center">Set Backgroud Color</TextBlock>
+
+                <Button Content="Set Backgroud color" HorizontalAlignment="Right">
+                    <Button.Flyout>
+                        <Flyout>
+                            <StackPanel>
+                                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="Select color for Background" Margin="0,0,0,12" />
+
+                                <muxc:ColorPicker
+                                    x:Name="backgroundColorPicker"
+                                    ColorSpectrumShape="Ring"
+                                    IsMoreButtonVisible="False"
+                                    IsColorSliderVisible="True"
+                                    IsColorChannelTextInputVisible="False"
+                                    IsHexInputVisible="True"
+                                    IsAlphaEnabled="False"
+                                    IsAlphaSliderVisible="False"
+                                    IsAlphaTextInputVisible="False" />
+
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+            </Grid>
+        </Border>
+
+
+        <!--Accent Color-->
+        <Border Background="{ThemeResource LayerFillColorDefaultBrush}"
+                Padding="15"
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Stretch" 
+                Margin="16,3"
+                CornerRadius="8"
+                BorderThickness="1"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+
+            <Grid>
+                <TextBlock VerticalAlignment="Center">Set Accent Color</TextBlock>
+
+                <Button Content="Set Accent color" HorizontalAlignment="Right">
+                    <Button.Flyout>
+                        <Flyout>
+                            <StackPanel>
+                                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="Set Accent color" Margin="0,0,0,12" />
+
+                                <muxc:ColorPicker
+                                    x:Name="accentColorPicker"
+                                    ColorSpectrumShape="Ring"
+                                    IsMoreButtonVisible="False"
+                                    IsColorSliderVisible="True"
+                                    IsColorChannelTextInputVisible="False"
+                                    IsHexInputVisible="True"
+                                    IsAlphaEnabled="False"
+                                    IsAlphaSliderVisible="False"
+                                    IsAlphaTextInputVisible="False" />
+
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+            </Grid>
+        </Border>
+
+
+        <!--Text Color-->
+        <Border Background="{ThemeResource LayerFillColorDefaultBrush}"
+                Padding="15"
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Stretch" 
+                Margin="16,3"
+                CornerRadius="8"
+                BorderThickness="1"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+
+            <Grid>
+                <TextBlock VerticalAlignment="Center">Text Color</TextBlock>
+
+                <Button Content="Set Text color" HorizontalAlignment="Right">
+                    <Button.Flyout>
+                        <Flyout>
+                            <StackPanel>
+                                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="Set text Color" Margin="0,0,0,12" />
+
+                                <muxc:ColorPicker
+                                    x:Name="textColorPicker"
+                                    ColorSpectrumShape="Ring"
+                                    IsMoreButtonVisible="False"
+                                    IsColorSliderVisible="True"
+                                    IsColorChannelTextInputVisible="False"
+                                    IsHexInputVisible="True"
+                                    IsAlphaEnabled="False"
+                                    IsAlphaSliderVisible="False"
+                                    IsAlphaTextInputVisible="False" />
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+            </Grid>
+        </Border>
+
+
+        <!--Secondary Text Color-->
+        <Border Background="{ThemeResource LayerFillColorDefaultBrush}"
+                Padding="15"
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Stretch" 
+                Margin="16,3"
+                CornerRadius="8"
+                BorderThickness="1"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+
+            <Grid>
+                <TextBlock VerticalAlignment="Center">Set Secondary color of Text</TextBlock>
+
+                <Button Content="Set Secondary Text color" HorizontalAlignment="Right">
+                    <Button.Flyout>
+                        <Flyout>
+                            <StackPanel>
+                                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="Set secondary color of text" Margin="0,0,0,12" />
+
+                                <muxc:ColorPicker
+                                    x:Name="secondaryTextColorPicker"
+                                    ColorSpectrumShape="Ring"
+                                    IsMoreButtonVisible="False"
+                                    IsColorSliderVisible="True"
+                                    IsColorChannelTextInputVisible="False"
+                                    IsHexInputVisible="True"
+                                    IsAlphaEnabled="False"
+                                    IsAlphaSliderVisible="False"
+                                    IsAlphaTextInputVisible="False" />
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+            </Grid>
+        </Border>
+
+
+
+        <!--Icon style title-->
+        <Frame Grid.Column="0" Grid.Row="3" Padding="20, 40, 0, 0">
+            <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="Icon Style" Margin="0,0,0,12" />
+        </Frame>
+
+        
+        <!--Dashboard icon style-->
+        <Border Background="{ThemeResource LayerFillColorDefaultBrush}"
+                Padding="15"
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Stretch" 
+                Margin="16,3"
+                CornerRadius="8"
+                BorderThickness="1"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+
+            <Grid>
+                <TextBlock VerticalAlignment="Center">Dashboard Icon Style</TextBlock>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+
+                    <ComboBox x:Name="dashIconStyle" PlaceholderText="Select Icon Style" Width="200" Margin="10,0,10,0">
+                        <x:String>Default</x:String>
+                        <x:String>Material</x:String>
+                        <x:String>Plain</x:String>
+                        <x:String>Plain Large</x:String>
+                    </ComboBox>
+
+                    <Button Content="DashBoard Icon Color" Margin="10,0,10,0">
+                        <Button.Flyout>
+                            <Flyout>
+                                <StackPanel>
+                                    <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="Set color of DashBoard Icons" Margin="0,0,0,12" />
+
+                                    <muxc:ColorPicker
+                                        x:Name="dashIconColorPicker"
+                                        ColorSpectrumShape="Ring"
+                                        IsMoreButtonVisible="False"
+                                        IsColorSliderVisible="True"
+                                        IsColorChannelTextInputVisible="False"
+                                        IsHexInputVisible="True"
+                                        IsAlphaEnabled="False"
+                                        IsAlphaSliderVisible="False"
+                                        IsAlphaTextInputVisible="False" />
+
+                                </StackPanel>
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
+                </StackPanel>
+
+            </Grid>
+        </Border>
+
+
+        <!--NavBar Icon Style-->
+        <Border Background="{ThemeResource LayerFillColorDefaultBrush}"
+                Padding="15"
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Stretch" 
+                Margin="16,3"
+                CornerRadius="8"
+                BorderThickness="1"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+
+            <Grid>
+                <TextBlock VerticalAlignment="Center">Nav-Bar Icon Style</TextBlock>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <ComboBox x:Name="navIconStyle" PlaceholderText="Select Icon Style" Width="200" Margin="10,0,10,0">
+                        <x:String>Pie</x:String>
+                        <x:String>Nxt-Bit</x:String>
+                        <x:String>Samsung</x:String>
+                        <x:String>Custom</x:String>
+                    </ComboBox>
+
+                    <Button Content="Navbar Icon Color" Margin="10,0,10,0">
+                        <Button.Flyout>
+                            <Flyout>
+                                <StackPanel>
+                                    <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="Set Navbar icon color" Margin="0,0,0,12" />
+
+                                    <muxc:ColorPicker
+                                    x:Name="navIconColorPicker"
+                                    ColorSpectrumShape="Ring"
+                                    IsMoreButtonVisible="False"
+                                    IsColorSliderVisible="True"
+                                    IsColorChannelTextInputVisible="False"
+                                    IsHexInputVisible="True"
+                                    IsAlphaEnabled="False"
+                                    IsAlphaSliderVisible="False"
+                                    IsAlphaTextInputVisible="False" />
+
+                                </StackPanel>
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+
+        <!--Customs title-->
+        <Frame Padding="20, 20, 0, 0">
+            <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="Customs" Margin="0,0,0,12"/>
+        </Frame>
+
+        
+        <!--Custom Dashboard Text color-->
+        <Border Background="{ThemeResource LayerFillColorDefaultBrush}"
+                Padding="15"
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Stretch" 
+                Margin="16,3"
+                CornerRadius="8"
+                BorderThickness="1"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+
+            <Grid>
+                <TextBlock VerticalAlignment="Center">Custom Dashboard Text Color</TextBlock>
+
+                <ToggleSwitch x:Name="customDashboradTextColorSwitch" HorizontalAlignment="Right" OffContent="" OnContent="" Margin="0,0,-110,0" Toggled="customDashboradTextColorSwitch_Toggled"/>
+            </Grid>
+        </Border>
+
+        <Border Background="{ThemeResource LayerFillColorDefaultBrush}"
+                Padding="15"
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Stretch" 
+                Margin="16,3"
+                CornerRadius="8"
+                BorderThickness="1"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                x:Name="customDashboardTextColor"
+                Visibility="Collapsed">
+
+            <Grid>
+                <Button Content="Set Color">
+                    <Button.Flyout>
+                        <Flyout>
+                            <StackPanel>
+                                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="Set Dashboard text color" Margin="0,0,0,12" />
+
+                                <muxc:ColorPicker
+                                    x:Name="DashTextColorPicker"
+                                    ColorSpectrumShape="Ring"
+                                    IsMoreButtonVisible="False"
+                                    IsColorSliderVisible="True"
+                                    IsColorChannelTextInputVisible="False"
+                                    IsHexInputVisible="True"
+                                    IsAlphaEnabled="False"
+                                    IsAlphaSliderVisible="False"
+                                    IsAlphaTextInputVisible="False" />
+
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+            </Grid>
+        </Border>
+
+
+
+        <!--Dashboard Icon Background-->
+        <Border Background="{ThemeResource LayerFillColorDefaultBrush}"
+                Padding="15"
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Stretch" 
+                Margin="16,3"
+                CornerRadius="8"
+                BorderThickness="1"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+
+            <Grid>
+                <TextBlock VerticalAlignment="Center">Dashboard Icon Background</TextBlock>
+
+                <ToggleSwitch x:Name="customDashIconBgStyleSwitch" HorizontalAlignment="Right" OffContent="" OnContent="" Margin="0,0,-110,0" Toggled="customDashIconBgStyleSwitch_Toggled"/>
+            </Grid>
+        </Border>
+
+        <Border Background="{ThemeResource LayerFillColorDefaultBrush}"
+                                Padding="15"
+                                VerticalAlignment="Top" 
+                                HorizontalAlignment="Stretch" 
+                                Margin="16,3"
+                                CornerRadius="8"
+                                BorderThickness="1"
+                                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                                x:Name="customDashIconBgStyleSwitchValues"
+                                Visibility="Collapsed">
+            
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Set Color">
+                    <Button.Flyout>
+                        <Flyout>
+                            <StackPanel>
+                                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="Set Dashboard Icon Background color" Margin="0,0,0,12" />
+
+                                <muxc:ColorPicker
+                                    x:Name="customDashIconColorPicker"
+                                    ColorSpectrumShape="Ring"
+                                    IsMoreButtonVisible="False"
+                                    IsColorSliderVisible="True"
+                                    IsColorChannelTextInputVisible="False"
+                                    IsHexInputVisible="True"
+                                    IsAlphaEnabled="False"
+                                    IsAlphaSliderVisible="False"
+                                    IsAlphaTextInputVisible="False" />
+
+                            </StackPanel>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+
+
+                <ComboBox x:Name="customDashIconBGStyle" PlaceholderText="Select Icon Style" Width="200" Margin="20,0">
+                    <x:String>Circle</x:String>
+                    <x:String>Square</x:String>
+                    <x:String>Rounded Square</x:String>
+                    <x:String>Type 4</x:String>
+                </ComboBox>
+
+            </StackPanel>
+        </Border>
+
+
+
+
+        <!--Status bar-->
+        <Border Background="{ThemeResource LayerFillColorDefaultBrush}"
+                Padding="15"
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Stretch" 
+                Margin="16,3"
+                CornerRadius="8"
+                BorderThickness="1"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+
+            <Grid>
+                <TextBlock VerticalAlignment="Center">Enable Status Bar</TextBlock>
+
+                <ToggleSwitch x:Name="statusBarSwitch" HorizontalAlignment="Right" OffContent="" OnContent="" Margin="0,0,-110,0" Toggled="statusBarSwitch_Toggled"/>
+            </Grid>
+        </Border>
+
+        <Border Background="{ThemeResource LayerFillColorDefaultBrush}"
+                                Padding="15"
+                                VerticalAlignment="Top" 
+                                HorizontalAlignment="Stretch" 
+                                Margin="16,3"
+                                CornerRadius="8"
+                                BorderThickness="1"
+                                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                                x:Name="StatusBarSettings"
+                                Visibility="Collapsed">
+
+            <Grid>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <CheckBox x:Name="showBatteryIcon" Content="Show Battery Icon" Margin="24,0,0,0" Checked="showBatteryIcon_Checked" Unchecked="showBatteryIcon_Unchecked"/>
+
+                    <muxc:RadioButtons x:Name="batteryStyle" Visibility="Collapsed" Margin="70,0, 0, 0">
+                        <RadioButton Content="Default" Checked="checkedBatteryStyleDefault" />
+                        <RadioButton Content="Circle" Checked="checkedBatteryStyleCircle"/>
+                    </muxc:RadioButtons>
+
+                    <CheckBox x:Name="showBatteryPercentage" Content="Show Battery Percentage" Margin="24,0,0,0" Checked="showBatteryPercentage_Checked" Unchecked="showBatteryPercentage_Unchecked"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1">
+                    <CheckBox x:Name="showClock" Content="Show Clock" Margin="24,0,0,0" Checked="showClock_Checked" Unchecked="showClock_Unchecked"/>
+                    <CheckBox x:Name="setCenterClock" Content="Center Clock" Visibility="Collapsed" Margin="54,0,0,0" Checked="setCenterClock_Checked" Unchecked="setCenterClock_Unchecked"/>
+                    <CheckBox x:Name="ShowCPUTemp" Content="Show CPU Temp" Margin="24,0,0,0" Checked="ShowCPUTemp_Checked" Unchecked="ShowCPUTemp_Unchecked"/>
+                </StackPanel>
+
+            </Grid>
+        </Border>
+
+
+        <!--Aditional Settings-->        
+        <Frame Padding="20, 20, 0, 0">
+            <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="Aditional settings" Margin="0,0,0,12"/>
+        </Frame>
+
+        <Border Background="{ThemeResource LayerFillColorDefaultBrush}"
+                Padding="15"
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Stretch" 
+                Margin="16,3"
+                CornerRadius="8"
+                BorderThickness="1"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Margin="30, 0, 0, 0" Grid.Column="0 ">
+                    <CheckBox x:Name="showBatteryBar" Content="Show Battery Bar" Checked="showBatteryBar_Checked" Unchecked="showBatteryBar_Unchecked"/>
+                    <CheckBox x:Name="setRoundedCorners" Content="Rounded Corners" Checked="setRoundedCorners_Checked" Unchecked="setRoundedCorners_Unchecked"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1">
+                    <CheckBox x:Name="setNavbarBackground" Content="Nav-Bar Background" Checked="setNavbarBackground_Checked" Unchecked="setNavbarBackground_Unchecked"/>
+                    <CheckBox x:Name="setDashBoardTextColor" Content="DashBoard Text Color" Checked="dashBoardTextColor_Checked" Unchecked="dashBoardTextColor_Unchecked" />
+                    <CheckBox x:Name="setDashBoardIconColor" Content="DashBoard Icon BackGround" Visibility="Collapsed" Margin="30,0,0,0" Checked="setDashBoardIconColor_Checked" Unchecked="setDashBoardIconColor_Unchecked"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+        <!--Splash Screen Title-->
+        <Frame Padding="20, 20, 0, 0">
+            <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="Splash Image" Margin="0,0,0,12"/>
+        </Frame>
+
+        <!--Select Splash Screen-->
+        <Border Background="{ThemeResource LayerFillColorDefaultBrush}"
+                Padding="15"
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Stretch" 
+                Margin="16,3"
+                CornerRadius="8"
+                BorderThickness="1"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+
+            <Grid>
+                <TextBlock VerticalAlignment="Center">Custom Dashboard Icon Color</TextBlock>
+
+                <Button x:Name="splashImageButton" Click="selectCustomSplash_Click" HorizontalAlignment="Right">Select File</Button>
+            </Grid>
+        </Border>
+
+        <!--Generate theme button-->
+        <Button Margin="25" Click="CreateTheme_Click" x:Name="generateThemeButton" Content="Generate Theme" Grid.Column="0" Background="Orange"/>
+
+    </StackPanel>
+</Page>
